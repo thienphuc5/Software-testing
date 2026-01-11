@@ -12,12 +12,12 @@ Các điểm không hợp lệ (<0 hoặc >10) sẽ bị bỏ qua.
 - JUnit 5
 
 ## Cấu trúc thư mục
-unit-test/
-├── src/ 
-├── test/ 
+unit-test/  
+├── src/  
+├── test/  
 └── README.md
 
-markdown 
+markdown  
 Sao chép mã
 
 ## Cách chạy kiểm thử
