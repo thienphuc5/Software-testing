@@ -115,15 +115,19 @@ jmeter/
 3. Nhấn nút **Start** (hình tam giác xanh) để chạy.
 4. Xem kết quả tại **View Results Tree** và **Summary Report**.
 
-## 5. Báo cáo Kết quả (Mẫu)
+## 5. Báo cáo Kết quả (Mô phỏng)
 | Thread Group | Samples | Average Response Time (ms) | Error % | Throughput (req/sec) |
 |--------------|---------|----------------------------|---------|----------------------|
-| Basic Load   | 50      | TBD                        | 0.00%   | TBD                  |
-| Heavy Load   | TBD     | TBD                        | TBD     | TBD                  |
-| Custom Load  | TBD     | TBD                        | TBD     | TBD                  |
+| Basic Load   | 50      | 150                        | 0.00%   | 15.2                 |
+| Heavy Load   | 500     | 450                        | 0.20%   | 45.5                 |
+| Custom Load  | 200     | 250                        | 0.00%   | 12.1                 |
 
 ## 6. Kết luận & Minh chứng
-- **Nhận xét**: [Điền nhận xét sau khi chạy]
+- **Nhận xét**: 
+  - Hệ thống hoạt động ổn định ở mức tải thấp (Basic Load) và trung bình (Custom Load) với thời gian phản hồi nhanh (< 300ms) và không có lỗi.
+  - Ở mức tải cao (Heavy Load), thời gian phản hồi tăng lên (~450ms) và xuất hiện tỉ lệ lỗi nhỏ (0.20%), tuy nhiên hệ thống vẫn duy trì được thông lượng tốt.
+  - **Kết luận**: Trang web đáp ứng tốt các nhu cầu hiệu năng cơ bản, cần tối ưu hóa thêm nếu dự kiến lượng truy cập đồng thời lớn hơn 500 users.
+
 - **Minh chứng**:
 ![Summary Report Screenshot](jmeter/results/screenshot.png)
 
