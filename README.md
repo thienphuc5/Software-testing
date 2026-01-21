@@ -60,14 +60,14 @@ Thực hành các kịch bản kiểm thử tự động end-to-end phổ biến
 - Cypress
 
 ## Cấu trúc thư mục
-cypress-exercise/
-├── cypress/
-│   ├── e2e/
-│   │   ├── login_spec.cy.js
-│   │   ├── cart_spec.cy.js
-│   │   └── checkout_spec.cy.js
-│   └── videos/
-├── cypress.config.js
+cypress-exercise/ 
+├── cypress/ 
+│   ├── e2e/ 
+│   │   ├── login_spec.cy.js 
+│   │   ├── cart_spec.cy.js 
+│   │   └── checkout_spec.cy.js 
+│   └── videos/ 
+├── cypress.config.js 
 └── package.json
 
 ## Cách chạy kiểm thử
