@@ -33,10 +33,12 @@ Các điểm không hợp lệ (<0 hoặc >10) sẽ bị bỏ qua.
 - JUnit 5
 
 ## Cấu trúc thư mục
+```
 unit-test/  
 ├── src/  
 ├── test/  
 └── README.md
+```
 
 ## Cách chạy kiểm thử
 ###  IntelliJ
@@ -60,15 +62,17 @@ Thực hành các kịch bản kiểm thử tự động end-to-end phổ biến
 - Cypress
 
 ## Cấu trúc thư mục
-cypress-exercise/ 
-├── cypress/ 
-│   ├── e2e/ 
-│   │   ├── login_spec.cy.js 
-│   │   ├── cart_spec.cy.js 
-│   │   └── checkout_spec.cy.js 
-│   └── videos/ 
-├── cypress.config.js 
+```
+cypress-exercise/
+├── cypress/
+│   ├── e2e/
+│   │   ├── login_spec.cy.js
+│   │   ├── cart_spec.cy.js
+│   │   └── checkout_spec.cy.js
+│   └── videos/
+├── cypress.config.js
 └── package.json
+```
 
 ## Cách chạy kiểm thử
 1. Mở terminal tại thư mục `cypress-exercise`
