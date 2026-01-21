@@ -11,7 +11,7 @@ Bài tập yêu cầu quan sát và nhận diện các vấn đề liên quan đ
 🔗 Liên kết bài tập: [https://cantunsee.space](https://cantunsee.space) (trang web của trò chơi)
 
 ## Kết quả đạt được
-Điểm số: 
+Điểm số: 6330
 
 Kết quả cho thấy khả năng quan sát và nhận diện lỗi giao diện ở mức tốt so với đa số người tham gia.
 
