@@ -79,3 +79,51 @@ cypress-exercise/
 2. Chạy lệnh: `npx cypress run` (chạy ngầm) hoặc `npx cypress open` (giao diện)
 
 Sinh viên: Nguyễn Thiện Phúc
+
+# Chương 4: Bài tập thực hành kiểm thử hiệu năng với JMeter
+
+## 1. Mô tả & Mục tiêu
+Thực hiện kiểm thử hiệu năng trên trang web `https://www.example.com` bằng công cụ Apache JMeter để đánh giá khả năng chịu tải và độ ổn định.
+
+## 2. Kịch bản Kiểm thử (Test Plan)
+
+### Thread Group 1: Kịch bản cơ bản (Basic Load)
+- **Cấu hình**: 10 users, 1 loop.
+- **Mô tả**: Gửi yêu cầu HTTP GET đến trang chủ.
+- **Mục đích**: Kiểm tra chức năng cơ bản.
+
+### Thread Group 2: Kịch bản tải nặng (Heavy Load)
+- **Cấu hình**: 50 users, Ramp-up 30s.
+- **Mô tả**: Gửi yêu cầu đến trang chủ và trang con (`/about`).
+- **Mục đích**: Kiểm tra khả năng chịu tải khi người dùng tăng dần.
+
+### Thread Group 3: Kịch bản tùy chỉnh (Custom Load)
+- **Cấu hình**: 20 users, chạy trong 60 giây.
+- **Mô tả**: Truy cập ngẫu nhiên 2 trang.
+- **Mục đích**: Mô phỏng hành vi duy trì.
+
+## 3. Cấu trúc thư mục
+```
+jmeter/
+├── performance_test.jmx  (File cấu hình test plan)
+└── results/              (Thư mục chứa kết quả/ảnh chụp màn hình)
+```
+
+## 4. Cách chạy kiểm thử
+1. Cài đặt [Apache JMeter](https://jmeter.apache.org/).
+2. Mở file `jmeter/performance_test.jmx` bằng JMeter GUI.
+3. Nhấn nút **Start** (hình tam giác xanh) để chạy.
+4. Xem kết quả tại **View Results Tree** và **Summary Report**.
+
+## 5. Báo cáo Kết quả (Mẫu)
+| Thread Group | Samples | Average Response Time (ms) | Error % | Throughput (req/sec) |
+|--------------|---------|----------------------------|---------|----------------------|
+| Basic Load   | 50      | TBD                        | 0.00%   | TBD                  |
+| Heavy Load   | TBD     | TBD                        | TBD     | TBD                  |
+| Custom Load  | TBD     | TBD                        | TBD     | TBD                  |
+
+## 6. Kết luận & Minh chứng
+- **Nhận xét**: [Điền nhận xét sau khi chạy]
+- **Minh chứng**:
+![Summary Report Screenshot](jmeter/results/screenshot.png)
+
