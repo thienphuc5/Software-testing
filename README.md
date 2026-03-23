@@ -131,3 +131,137 @@ jmeter/
 - **Minh chứng**:
 ![Summary Report Screenshot](jmeter/results/screenshot.png)
 
+
+# Chương 5: Bài tập kiểm thử thủ công (Manual Testing) – Website Bán Hàng Online
+
+## 1. Mô tả & Mục tiêu
+
+Xây dựng bộ tài liệu kiểm thử thủ công đầy đủ cho một hệ thống website bán hàng online (E-commerce), bao gồm:
+
+- Kế hoạch kiểm thử (Test Plan)
+- Ca kiểm thử (Test Cases) – 45 test case
+- Ma trận truy vết yêu cầu (RTM) – 16 yêu cầu, bao phủ 100%
+- Báo cáo lỗi (Bug Reports) – 13 bug giả lập
+- Báo cáo kiểm thử (Test Report)
+- Chỉ số kiểm thử (Test Metrics)
+
+## 2. Phạm vi kiểm thử
+
+Hệ thống có 3 module chính:
+
+| Module | Chức năng |
+|--------|-----------|
+| **Module 1 – Xác thực (Auth)** | Đăng ký, Đăng nhập, Quên mật khẩu, Đăng xuất |
+| **Module 2 – Sản phẩm & Giỏ hàng** | Tìm kiếm, Lọc, Xem chi tiết, Thêm/Cập nhật/Xoá giỏ |
+| **Module 3 – Thanh toán** | Nhập địa chỉ, Chọn PTTT (COD/Visa), Đặt hàng, Lịch sử |
+
+## 3. Cấu trúc thư mục
+
+```
+manual-testing/
+├── Test Plan/         → Test_Plan.md
+├── Test Cases/        → Test_Cases_AUTH.md, Test_Cases_CART.md, Test_Cases_CHECKOUT.md
+├── RTM/               → RTM.md
+├── Bug Reports/       → Bug_Reports.md
+├── Test Report/       → Test_Report.md
+└── Test Metrics/      → Test_Metrics.md
+```
+
+## 4. Tổng hợp kết quả kiểm thử
+
+| Chỉ số | Kết quả |
+|--------|---------|
+| Tổng Test Case | 45 |
+| Pass | 31 (68.9%) |
+| Fail | 13 (28.9%) |
+| Blocked | 1 (2.2%) |
+| Tổng Bug | 13 (Critical: 5, Major: 6, Minor: 2) |
+| Độ bao phủ yêu cầu | **100%** (16/16 requirements) |
+| Quyết định Release | ❌ **NO-RELEASE** |
+
+## 5. Môi trường kiểm thử
+
+- **Trình duyệt**: Google Chrome (mới nhất)
+- **Hệ điều hành**: Windows 10/11
+- **Dữ liệu test**: Tài khoản giả lập (`testuser@example.com`)
+
+## 6. Kết luận
+
+Hệ thống hiện còn **5 bug Critical** chưa được khắc phục (bao gồm lỗ hổng bảo mật khi chưa đăng nhập vẫn vào được trang thanh toán và lỗi tính tiền). Tỷ lệ Pass chỉ đạt **68.9%** (thấp hơn ngưỡng 80%). **Khuyến nghị: Không phát hành phiên bản này trước khi các bug Critical và Major được sửa và kiểm tra lại.**
+
+Sinh viên: Nguyễn Thiện Phúc
+
+
+# Chương 6: Bài thực hành Quản lý Lỗi Phần Mềm (Defect Management)
+
+## 1. Mô tả & Mục tiêu
+
+Mô phỏng quy trình quản lý lỗi phần mềm trong doanh nghiệp cho hệ thống **Student Management System (SMS)**, sử dụng hai công cụ:
+
+- **GitHub Issues** – Quản lý bug mức đơn giản / open-source
+- **Jira Software** – Mô phỏng workflow chuyên nghiệp cấp doanh nghiệp
+
+## 2. Bối cảnh hệ thống
+
+**Hệ thống:** Student Management System (SMS)
+
+| Module | Chức năng |
+|--------|-----------|
+| Đăng nhập | Xác thực tài khoản Admin / Student |
+| Quản lý Sinh viên | CRUD (Thêm, Sửa, Xoá, Xem) |
+| Tìm kiếm | Tìm theo tên, MSSV, ngành |
+| Phân quyền | Admin / Student role-based access |
+
+## 3. Cấu trúc thư mục
+
+```
+defect-management/
+├── GitHub-Issues/
+│   ├── bug_report_template.md    → Template tạo bug trên GitHub
+│   └── github_issues_list.md     → 5 bug giả lập + vòng đời
+├── Jira/
+│   ├── jira_workflow.md          → Cấu hình workflow doanh nghiệp
+│   └── jira_bugs_list.md         → 10 bug Jira đầy đủ
+└── Defect_Management_Report.md   → Báo cáo tổng hợp chính
+```
+
+## 4. Tổng kết kết quả
+
+### GitHub Issues (5 bugs)
+| Severity | Số lượng | Closed |
+|----------|---------|--------|
+| 🔴 Critical | 3 | 1/3 |
+| 🟠 Major | 1 | 1/1 |
+| 🟡 Minor | 1 | 1/1 |
+
+### Jira (10 bugs)
+| Severity | Số lượng | Done |
+|----------|---------|------|
+| 🔴 Critical | 4 | 1/4 |
+| 🟠 Major | 4 | 3/4 |
+| 🟡 Minor | 2 | 2/2 |
+
+## 5. So sánh nhanh GitHub Issues vs Jira
+
+| Tiêu chí | GitHub Issues | Jira |
+|----------|:------------:|:----:|
+| Dễ dùng | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
+| Workflow | Cơ bản | Chuyên nghiệp |
+| Báo cáo | Hạn chế | Mạnh |
+| Agile/Sprint | ⭐⭐ | ⭐⭐⭐⭐⭐ |
+| Phù hợp doanh nghiệp | ❌ | ✅ |
+| Chi phí | Miễn phí | Free ≤10 người |
+
+## 6. 2 Bug Nghiêm Trọng Nhất
+
+1. **SMS-006 – Phân quyền sai**: Student thấy và truy cập được chức năng Admin → **Lỗ hổng bảo mật nghiêm trọng**, do thiếu role-check ở Frontend
+2. **SMS-002 – Thêm sinh viên không lưu DB**: API thất bại nhưng UI hiển thị "thành công" → **Dữ liệu không nhất quán**, do không check `response.ok` trước khi show toast
+
+## 7. Nhận xét quy trình
+
+- Quy trình **GitHub Issues** phù hợp cho nhóm nhỏ, đơn giản, tích hợp tốt với code repository
+- Quy trình **Jira** phản ánh đúng thực tế doanh nghiệp với workflow nhiều bước, custom fields, và báo cáo dashboard
+- Bug có **steps to reproduce rõ ràng** được sửa nhanh hơn ~40% so với bug mô tả mơ hồ
+- **Retest bắt buộc** trước khi close là nguyên tắc không thể bỏ qua
+
+Sinh viên: Nguyễn Thiện Phúc
